@@ -1,14 +1,12 @@
 package routers
 
 import (
-	"context"
-
 	"github.com/agudelozc/twitterGo/bd"
 	"github.com/agudelozc/twitterGo/models"
 	"github.com/aws/aws-lambda-go/events"
 )
 
-func EliminarTweet(ctx context.Context, request events.APIGatewayProxyRequest, claim models.Claim) models.RespApi {
+func EliminarTweet(request events.APIGatewayProxyRequest, claim models.Claim) models.RespApi {
 	var r models.RespApi
 	r.Status = 400
 
